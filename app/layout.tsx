@@ -1,22 +1,23 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
-import { Navbar } from "./components";
+import type { Metadata } from 'next';
+import localFont from 'next/font/local';
+import './globals.css';
+import { Navbar } from './components';
+import Footer from './components/footer/Footer';
 
 const geistSans = localFont({
-  src: "./assets/fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+  src: './assets/fonts/GeistVF.woff',
+  variable: '--font-geist-sans',
+  weight: '100 900',
 });
 const geistMono = localFont({
-  src: "./assets/fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+  src: './assets/fonts/GeistMonoVF.woff',
+  variable: '--font-geist-mono',
+  weight: '100 900',
 });
 
 export const metadata: Metadata = {
-  title: "Fresca Ruta",
-  description: "Fresca Ruta es una tienda que vende productos de calidad",
+  title: 'Fresca Ruta',
+  description: 'Fresca Ruta es una tienda que vende productos de calidad',
 };
 
 export default function RootLayout({
@@ -28,9 +29,10 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      > 
+      >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

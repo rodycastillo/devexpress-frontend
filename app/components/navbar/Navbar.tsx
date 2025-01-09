@@ -6,12 +6,16 @@ const navItems: { title: string; path: string }[] = [
     path: '/',
   },
   {
-    title: 'Tienda',
-    path: '/tienda',
+    title: 'Productos',
+    path: '/products',
   },
   {
-    title: 'Nosotros',
-    path: '/nosotros',
+    title: 'Beneficios',
+    path: '/beneficios',
+  },
+  {
+    title: 'Testimonios',
+    path: '/testimonios',
   },
   {
     title: 'Contacto',
@@ -24,7 +28,7 @@ export const Navbar = async () => {
     <div className="bg-primary">
       <div className="flex py-5 container mx-auto items-center">
         <ActiveLink path="/" className="flex items-center">
-          <span className="flex flex-1 text-center leading-7 text-3xl font-amatic font-bold text-black">
+          <span className="flex flex-1 text-center leading-6 text-4xl font-amatic font-bold text-black">
             Fruta <br /> Fresca
           </span>
         </ActiveLink>
@@ -36,7 +40,7 @@ export const Navbar = async () => {
               key={index}
               path={item.path}
               title={item.title}
-              className="font-amatic text-black text-xl"
+              className="font-amatic text-black text-2xl"
             />
           ))}
         </div>
