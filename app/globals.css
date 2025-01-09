@@ -1,10 +1,45 @@
+@font-face {
+  font-family: 'Amatic SC';
+  src: url('./assets/fonts/AmaticSC-Regular.ttf') format('truetype'),
+    url('./assets/fonts/AmaticSC-Bold.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Colores base */
+  --background: #ffffff; /* Blanco para los fondos principales */
+  --foreground: #171717; /* Gris oscuro para texto principal */
+  --base: #2f855a; /* Verde oscuro para navbar, footer, etc. */
+
+  /* Colores complementarios */
+  --primary: #34d399; /* Verde fresco para botones, enlaces y elementos destacados */
+  --secondary: #f6e05e; /* Amarillo suave para acentos y botones secundarios */
+  --highlight: #f4c95d; /* Tono cálido de amarillo para hover o detalles en botones */
+
+  /* Colores de fondo */
+  --background-light: #f7fafc; /* Gris claro para secciones con fondo suave */
+  --background-dark: #2d3748; /* Gris oscuro para texto secundario y áreas con menos énfasis */
+
+  /* Colores de texto */
+  --text-primary: #2d3748; /* Gris oscuro para texto principal */
+  --text-secondary: #f7fafc; /* Blanco para texto sobre fondos oscuros */
+  --text-muted: #718096; /* Gris más claro para texto menos destacado */
+
+  /* Colores para estado de botones */
+  --button-primary-bg: #34d399; /* Fondo del botón principal */
+  --button-primary-text: #ffffff; /* Texto del botón principal */
+  --button-secondary-bg: #f6e05e; /* Fondo del botón secundario */
+  --button-secondary-text: #171717; /* Texto del botón secundario */
+  --button-hover-bg: #2f855a; /* Hover del botón principal */
+  --button-hover-secondary-bg: #f4c95d; /* Hover del botón secundario */
+
+  /* Colores de alerta y error */
+  --alert-error: #f56565; /* Rojo cálido para mensajes de error o alertas */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,7 +51,7 @@
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: #f7fafc;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -27,9 +62,9 @@ body {
 }
 
 .link {
-  @apply hover:underline hover:text-blue-400 mr-2 transition-all;
+  @apply hover:underline hover:text-green-900 transition-all;
 }
 
 .active-link {
-  @apply text-blue-500;
+  @apply text-green-900;
 }

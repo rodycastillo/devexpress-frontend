@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Navbar } from "./components";
 
 const geistSans = localFont({
   src: "./assets/fonts/GeistVF.woff",
@@ -14,8 +15,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "DevExpress",
-  description: "DevExpress builds feature-complete UI components for React.",
+  title: "Fresca Ruta",
+  description: "Fresca Ruta es una tienda que vende productos de calidad",
 };
 
 export default function RootLayout({
@@ -27,7 +28,8 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      > 
+        <Navbar />
         {children}
       </body>
     </html>
